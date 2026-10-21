@@ -152,6 +152,11 @@ h3 {
   margin-top: 7px;
 }
 
+.paper-note {
+  font-size: 15px;
+  margin-top: 8px;
+}
+
 .abstract-toggle {
   margin: 0;
   padding: 0;
