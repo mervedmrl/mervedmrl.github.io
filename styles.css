@@ -65,6 +65,7 @@ a:hover {
 h1,
 h2,
 h3,
+h4,
 p {
   margin: 0;
 }
@@ -86,9 +87,49 @@ h1 {
 .links {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px 14px;
-  margin-top: 18px;
+  gap: 10px;
+  margin-top: 20px;
   font-size: 16px;
+}
+
+.profile-button {
+  border: 1px solid var(--accent);
+  border-radius: 2px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 8px 17px;
+  font-weight: 600;
+  line-height: 1.2;
+  transition: background-color 150ms ease, color 150ms ease;
+}
+
+.profile-button:hover {
+  text-decoration: none;
+}
+
+.profile-button-primary {
+  background: var(--accent);
+  color: #ffffff;
+}
+
+.profile-button-primary:hover {
+  background: #1f4d54;
+}
+
+.profile-button-secondary {
+  background: transparent;
+  color: var(--accent);
+}
+
+.profile-button-secondary:hover {
+  background: var(--accent-soft);
+}
+
+.profile-button:focus-visible {
+  outline: 3px solid rgba(40, 95, 104, 0.28);
+  outline-offset: 2px;
 }
 
 .email {
@@ -123,26 +164,75 @@ h2 {
   margin-top: 13px;
 }
 
+.research-group {
+  margin-top: 30px;
+}
+
+.research-group + .research-group {
+  margin-top: 38px;
+  padding-top: 30px;
+  border-top: 1px solid var(--line);
+}
+
+.research-group-heading {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.research-group-heading::after {
+  content: "";
+  height: 1px;
+  flex: 1;
+  background: var(--line);
+}
+
+.research-group-heading h3 {
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.research-group-featured .research-group-heading h3 {
+  padding: 7px 10px;
+  background: var(--accent);
+  color: #ffffff;
+}
+
+.research-group-featured .research-group-heading::after {
+  background: var(--accent);
+}
+
+.research-group-progress .research-group-heading h3 {
+  color: var(--muted);
+}
+
 .paper {
-  margin-top: 24px;
+  margin-top: 26px;
 }
 
-.paper:first-of-type {
-  margin-top: 0;
+.research-group > .paper:first-of-type {
+  margin-top: 18px;
 }
 
-h3 {
+h4 {
   font-size: 17px;
   line-height: 1.4;
   font-weight: 600;
 }
 
-.paper-label {
-  color: var(--accent);
-  display: block;
-  font-size: 14px;
-  line-height: 1.3;
-  margin-bottom: 3px;
+.paper-featured {
+  padding: 20px 22px;
+  border-left: 3px solid var(--accent);
+  background: var(--accent-soft);
+}
+
+.paper-featured .abstract {
+  background: #ffffff;
+  border-left: 0;
 }
 
 .meta {
@@ -201,10 +291,17 @@ h3 {
   .profile {
     position: static;
     margin-bottom: 38px;
+    text-align: center;
   }
 
   .photo {
     max-width: 220px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .links {
+    justify-content: center;
   }
 
   h1 {
