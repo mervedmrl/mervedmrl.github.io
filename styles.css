@@ -132,11 +132,74 @@ h1 {
   outline-offset: 2px;
 }
 
+.email-row {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  margin-top: 8px;
+}
+
 .email {
   color: var(--muted);
   font-size: 15px;
-  margin-top: 8px;
   overflow-wrap: anywhere;
+}
+
+.email-copy {
+  position: relative;
+  width: 28px;
+  height: 28px;
+  padding: 5px;
+  border: 0;
+  border-radius: 4px;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  flex: 0 0 auto;
+}
+
+.email-copy:hover,
+.email-copy.is-copied {
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+.email-copy:focus-visible {
+  outline: 3px solid rgba(40, 95, 104, 0.28);
+  outline-offset: 1px;
+}
+
+.email-copy svg {
+  display: block;
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.copy-feedback {
+  position: absolute;
+  top: calc(100% + 3px);
+  left: 50%;
+  z-index: 1;
+  padding: 2px 6px;
+  border-radius: 3px;
+  background: var(--text);
+  color: #ffffff;
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(-50%);
+  transition: opacity 120ms ease;
+  white-space: nowrap;
+}
+
+.email-copy.is-copied .copy-feedback {
+  opacity: 1;
 }
 
 .section {
@@ -301,6 +364,10 @@ h4 {
   }
 
   .links {
+    justify-content: center;
+  }
+
+  .email-row {
     justify-content: center;
   }
 

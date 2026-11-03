@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Merve Demirel</title>
-    <link rel="stylesheet" href="styles.css?v=20261103">
+    <link rel="stylesheet" href="styles.css?v=20261103-2">
   </head>
   <body>
     <main class="page">
@@ -21,7 +21,16 @@
           <a class="profile-button profile-button-primary" href="Demirel_JMP.pdf" aria-label="Read job market paper">JMP</a>
           <a class="profile-button profile-button-secondary" href="Demirel_CV.pdf" aria-label="View curriculum vitae">CV</a>
         </nav>
-        <p class="email">merve.demirel@iies.su.se</p>
+        <div class="email-row">
+          <span class="email">merve.demirel@iies.su.se</span>
+          <button class="email-copy" type="button" data-email="merve.demirel@iies.su.se" aria-label="Copy email address">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="8" y="8" width="11" height="11" rx="2"></rect>
+              <path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"></path>
+            </svg>
+            <span class="copy-feedback" aria-live="polite"></span>
+          </button>
+        </div>
       </aside>
 
       <div class="content">
@@ -295,6 +304,6 @@
       </div>
     </main>
 
-    <script src="script.js"></script>
+    <script src="script.js?v=20261103"></script>
   </body>
 </html>
