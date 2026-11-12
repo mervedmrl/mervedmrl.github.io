@@ -227,6 +227,45 @@ h2 {
   margin-top: 13px;
 }
 
+.references-row {
+  display: grid;
+  grid-template-columns: 94px minmax(0, 1fr);
+  gap: 12px;
+  align-items: baseline;
+  margin-top: 4px;
+  font-size: 15px;
+}
+
+.about + .references-row {
+  margin-top: 28px;
+}
+
+.references-label {
+  color: var(--text);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.references-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px 8px;
+}
+
+.reference-item {
+  display: inline-flex;
+  gap: 8px;
+  align-items: baseline;
+  white-space: nowrap;
+}
+
+.references-row + .section {
+  margin-top: 34px;
+}
+
 .research-group {
   margin-top: 30px;
 }
@@ -381,6 +420,11 @@ h4 {
 
   .email-row {
     justify-content: center;
+  }
+
+  .references-row {
+    grid-template-columns: 1fr;
+    gap: 6px;
   }
 
   h1 {
